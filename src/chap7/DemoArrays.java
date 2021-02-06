@@ -1,8 +1,9 @@
 /* Westley W Williams
-*  CIS 2212-800 Java I FlexPace
-*  Assignment 06 - ARRAYS
-*  Finished January 27th, 2021
-*/
+ *  CIS 2212-800 Java I FlexPace
+ *  Assignment 06 - ARRAYS
+ *  Submitted February 2nd, 2021
+ */
+
 package chap7;
 
 import java.util.Scanner;
@@ -10,8 +11,9 @@ import java.util.Scanner;
 public class DemoArrays {
 
 	public static void main(String[] args) {
+
 		// we are required to create the following variable names and parallel arrays
-		final int PARALLEL_ARRAYS = 19; // this number will ensure that each array is the same size.
+		final int PARALLEL_ARRAYS; // I'll set this constant later, depending on the array size of volunteerName.
 		final double MINIMUM_HOURS_REQUIRED = 5.0; // this is the minimum hours they can volunteer per week
 		final double MINIMUM_WEEKS_REQUIRED = 2.0; // the user must have this many weeks worked
 		// arrays, which consist of string and double arrays.
@@ -24,6 +26,7 @@ public class DemoArrays {
 				"Thomas Jefferson", "James Madison", "James Monroe", "John Quincey Adams", "Andrew Jackson",
 				"Martin Van Buren", "William Henry Harrison", "John Tyler", "James K. Polk", "Zachary Taylor",
 				"Millard Fillmore", "Franklin Pierce", "James Buchanan", "Veronica Villeroy", "William Walker" };
+		PARALLEL_ARRAYS = volunteerName.length;// initialize this constant with the length of the array above
 		double[] hoursVolunteered = new double[PARALLEL_ARRAYS];
 		double[] weeksVolunteered = new double[PARALLEL_ARRAYS];
 		double[] totalHrsVolunteered = new double[PARALLEL_ARRAYS];
@@ -152,4 +155,4 @@ public class DemoArrays {
 		} // end of for loop
 		return grandTotalHours;
 	}// end of printVolunteerData method
-}// end of class
+}
